@@ -3,9 +3,8 @@ const __API_URL__ = 'https://dk-rm-nd-booklist.herokuapp.com/api/v1/books';
 
 $.getJSON(__API_URL__)
 .then(result => {
-    $('#number-books').append(`Total: (${result.length})`);
     result.forEach(book => {
         $('#booklist').append(`Title: ${book.title} By: ${book.author}`);
-        console.log(result);
+        console.log(book.title, book.author);
     })
 }).catch(error => console.error(error));
