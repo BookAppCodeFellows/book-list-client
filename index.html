@@ -9,13 +9,25 @@
 <body>
     <section class="books">
         <h2>Books <span id="number-books"></span></h2>
-        <ul id="booklist"></ul>
+        <section id="book-list-page" class="page">
+           <ul id="book-list"></ul>
+        </section>
+        <section id="book-detail-page" class="page">
+            <p id="book-author"></p>
+        </section>
+        <section id="book-create-page" class="page">Create</section>
+        <section id="error-page" class="page">Error</section>
     </section>
-   
+
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
+  <script src="scripts/views/book-list.js"></script>
+  <script src="scripts/views/book-details.js"></script>
+  <script src="scripts/controllers/routes.js"></script>
   <script src="scripts/models/book.js"></script>
 </body>
 </html>
