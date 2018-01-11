@@ -3,7 +3,8 @@ var app = app || {};
 (module => {
   const bookListPage = {}
 
-  bookListPage.initIndexPage = (books) => {
+  bookListPage.init = (books) => {
+    $('#book-list').empty();
     books.forEach(book => {
         $('#book-list').append(`<li data-id="${book.id}">${book.title}`);
     })

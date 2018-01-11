@@ -4,22 +4,16 @@ page('/*', (ctx, next) => {
 });
 
 page('/', () => {
-  $('.page').hide();
   app.Book.fetchAll().then(books => {
-    app.bookListPage.initIndexPage(books);
-    $('#book-list-page').show();
+    app.bookListPage.init(books);
   })
-  // fetch data for all books
-  // convert raw data into Book instance
-  // populate list with boooks
-  // handlebars template per book
 })
 
 page('/books/:id', (ctx) => {
   $('.page').hide()
 
   app.Book.fetchOne(ctx.params.id).then(book => {
-    app.bookDetailPage.initDetailPage(book);
+    app.bookDetailPage.init(book);
     $('#book-detail-page').show();
   });
 
