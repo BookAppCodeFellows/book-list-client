@@ -12,7 +12,7 @@ var app = app || {};
 
     Book.fetchAll = () => $.getJSON(__API_URL__);
 
-    Book.fetchOne = (id) => $getJSON(`__API_URL__/${id}`);
+    Book.fetchOne = (id) => $.getJSON(`${__API_URL__}/${id}`);
         
     module.Book = Book;
 
