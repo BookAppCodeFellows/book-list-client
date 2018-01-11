@@ -27,7 +27,7 @@ page('/books/:id', (ctx) => {
 
 page('/books/create', () => {
   $('.page').hide();
-  $('#book-detail-page').show();
+  $('#book-create-page').show();
 });
 
 page('/error', () => {
