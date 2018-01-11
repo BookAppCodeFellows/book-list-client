@@ -7,6 +7,7 @@ page('/', () => {
   $('.page').hide();
   app.Book.fetchAll().then(books => {
     app.bookListPage.initIndexPage(books);
+    $('#book-list-page').show();
   })
   // fetch data for all books
   // convert raw data into Book instance
