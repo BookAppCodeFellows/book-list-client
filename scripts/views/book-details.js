@@ -3,7 +3,7 @@ var app = app || {};
 (module => {
     
     const bookDetailPage = {};
-    bookDetailPage.initBookDetailPage = (book) => {
+    bookDetailPage.initDetailPage = (book) => {
         $('#book-author').text(book.author);
     }
     module.bookDetailPage = bookDetailPage;

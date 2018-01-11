@@ -35,3 +35,5 @@ page('/error', () => {
   $('.page').hide();
   $('#error-page').show();
 });
+
+page.start();
