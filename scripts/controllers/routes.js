@@ -20,9 +20,8 @@ page('/books/:id', (ctx) => {
   $('#book-crate-page').show();
 });
 
-page('/books/create', () => {
-  $('.page').hide();
-  $('#book-create-page').show();
+page('/new', () => {
+  app.bookCreatePage.init();
 });
 
 page('/error', () => {

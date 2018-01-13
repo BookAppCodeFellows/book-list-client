@@ -10,7 +10,7 @@
     <nav id="book-nav">
         <ul id="book-links">
             <li><a href="/">Book List</a></li>
-            <li><a href="/create">Create Book</a></li>
+            <li><a href="/new">Create Book</a></li>
         </ul>
     </nav>
     <section class="books">
@@ -22,7 +22,27 @@
         <section id="book-detail-page" class="page">
             <p id="book-author"></p>
         </section>
-        <section id="book-create-page" class="page">Create</section>
+        <section id="book-create-page" class="page">
+            <form id="new-book-form">
+                <label for="title">Title</label>
+                <input id="title" type="text" name="title" placeholder="Title">
+
+                <label for="author">Author</label>
+                <input id="author" type="text" name="author" placeholder="Author">
+
+                <label for="isbn">ISBN</label>
+                <input id="isbn" type="text" name="isbn" placeholder="ISBN">
+
+                <label for="image-url">Image URL</label>
+                <input id="image-url" type="text" name="image-url" placeholder="Image URL">
+
+                <label for="desription">Description</label>
+                <textarea id="description" name="description" placeholder="Description"></textarea>
+
+                <input type="submit" name="submit">
+
+            </form>
+        </section>
         <section id="error-page" class="page">Error</section>
 
     </section>
@@ -35,6 +55,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
   <script src="scripts/views/book-list.js"></script>
   <script src="scripts/views/book-details.js"></script>
+  <script src="scripts/views/book-create.js"></script>
   <script src="scripts/models/book.js"></script>
   <script src="scripts/controllers/routes.js"></script>
 </body>
