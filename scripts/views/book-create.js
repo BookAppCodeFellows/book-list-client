@@ -10,21 +10,21 @@ var app = app || {};
     $('#new-book-form').on('submit', (event) => {
         event.preventDefault();
         var bookData = {
-            title: $('#title').val(),
-            author: $('#author').val(),
-            isnb: $('#isbn').val(),
-            image_url: $('#image-url').val(),
-            description: $('#description').val(),
+            title: $('#create-title').val(),
+            author: $('#create-author').val(),
+            isnb: $('#create-isbn').val(),
+            image_url: $('#create-image-url').val(),
+            description: $('#create-description').val(),
         }
         app.Book.create(bookData).then(result => {
             console.log(result);
             page('/');
         })
-        $('#title').val('');
-        $('#author').val('');
-        $('#isbn').val('');
-        $('#image-url').val('');
-        $('#description').val('');
+        $('#create-title').val('');
+        $('#create-author').val('');
+        $('#create-isbn').val('');
+        $('#create-image-url').val('');
+        $('#create-description').val('');
     })
 
     module.bookCreatePage = bookCreatePage;
