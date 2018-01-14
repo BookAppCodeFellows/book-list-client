@@ -6,13 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/base.css">
     <title>Document</title>
+
+    <script id="book-template" type="text/x-handlebars-template">
+        <div class="book-wrapper">
+            <h2 class="book-title">{{ title }}</h2>
+            <div class="author-isbn">
+                <div class="book-author">{{ author }}</div>
+                <div class="book-isbn">{{ isbn }}</div>
+            </div>
+            <div class="book-image">
+                <img src="{{ image_url }}">
+            </div>
+            <div class="book-description">{{ description }}...<button type="button" id="view-details" data-id="{{ id }}">Read more</button></div>   
+        </div>
+    </script>
+    
 </head>
 <body>
     <nav id="book-nav">
         <ul id="book-links">
             <li><a href="/">Book List</a></li>
             <li class="not-admin"><a href="/new">Create Book</a></li>
-            <li><a href="/login">login</a></li>
+            <li id="login-link"><a href="/login">login</a></li>
         </ul>
     </nav>
     <section class="books">

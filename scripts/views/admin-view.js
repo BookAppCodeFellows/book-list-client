@@ -17,6 +17,8 @@ var app = app || {};
             if (input === password) {
                 $('.not-admin').removeClass('not-admin')
                 console.log('logged in as admin')
+                $('#login-link').hide()
+                page('/');
             } else {
                 alert('You need to enter the correct passphrase.')
             }
