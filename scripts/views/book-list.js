@@ -4,12 +4,18 @@ var app = app || {};
   const bookListPage = {}
 
   bookListPage.init = (books) => {
+    console.log(books)
     $('#book-list').empty();
+    
+    let bookSource = $('#book-template').html();
+    let template = Handlebars.compile(bookSource);
+
     books.forEach(book => {
-        $('#book-list').append(`<li data-id="${book.id}">${book.title}`);
+        $('#book-list').append(template(book));
     })
-    $('#book-list').on('click', 'li', event => {
-        let = bookId = $(event.target).data('id');
+    $('#view-details').on('click', event => {
+        let = bookId = $(this).data('data-id');
+        console.log(bookId)
         page(`/books/${bookId}`);
     })
     $('#book-list-page').show();
