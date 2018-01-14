@@ -4,7 +4,7 @@ var app = app || {};
 
     const bookUpdatePage = {};
     bookUpdatePage.init = () => {
-        $('#book-update-page').show();
+        //$('#book-update-page').show();
     }
 
     $('#update-book-form').on('click', 'button', (event) => {

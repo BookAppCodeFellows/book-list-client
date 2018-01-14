@@ -14,14 +14,16 @@ page('/books/:id', (ctx) => {
 
   app.Book.fetchOne(ctx.params.id).then(book => {
     app.bookDetailPage.init(book);
-    $('#book-detail-page').show();
   });
 
-  $('#book-crate-page').show();
 });
 
 page('/new', () => {
   app.bookCreatePage.init();
+});
+
+page('/login', () => {
+  app.adminView.init();
 });
 
 page('/error', () => {

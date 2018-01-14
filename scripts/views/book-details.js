@@ -4,6 +4,7 @@ var app = app || {};
         
     const bookDetailPage = {};
     bookDetailPage.init = (book) => {
+        $('#book-detail-page').show();
         $('#update-book-form').hide();
         $('#book-author').text(book.author);
 

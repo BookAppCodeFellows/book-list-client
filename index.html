@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/base.css">
     <title>Document</title>
 </head>
 <body>
     <nav id="book-nav">
         <ul id="book-links">
             <li><a href="/">Book List</a></li>
-            <li><a href="/new">Create Book</a></li>
+            <li class="not-admin"><a href="/new">Create Book</a></li>
+            <li><a href="/login">login</a></li>
         </ul>
     </nav>
     <section class="books">
@@ -21,8 +23,8 @@
         </section>
         <section id="book-detail-page" class="page">
             <p id="book-author"></p>
-            <button type="button" id="update-btn" data-id="">Update</button>
-            <button type="button" id="delete-btn" data-id="">Delete</button>
+            <button type="button" id="update-btn" class="not-admin" data-id="">Update</button>
+            <button type="button" id="delete-btn" class="not-admin" data-id="">Delete</button>
             <form id="update-book-form">
                 
                 <label for="title">Title</label>
@@ -62,6 +64,14 @@
 
                 <input type="submit" name="submit">
 
+            </form>
+        </section>
+        <section id="book-admin-page" class="page">
+            <form id="admin-view">
+                <label for="login">Please enter your pass phrase</label>
+                <input id="pass-phrase" type="text" name="pass-phrase" placeholder="Enter phrase here">
+
+                <button type="button" id="verify-btn">Verify</button>
             </form>
         </section>
         <section id="error-page" class="page">Error</section>
