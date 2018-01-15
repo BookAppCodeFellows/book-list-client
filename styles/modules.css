@@ -1,0 +1,47 @@
+.book-wrapper {
+    border-radius: 5px;
+    background-color: grey;
+    margin-bottom: 42px;
+}
+
+.book-wrapper .book-image {
+    text-align: center;
+}
+.book-wrapper img {
+    margin: 0 auto;
+}
+
+.book-wrapper .title-author {
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #939393;
+}
+
+.book-wrapper .book-description button {
+    font-size: 16px;
+    border-radius: 2px;
+    border: 0;
+    padding: 5px 10px;
+    background-color: #d8d8d8;
+    color: #4d4d4d;
+}
+
+#book-nav {
+    background-color: #484848;
+    padding: 10px;
+}
+#navbar-toggle {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    float: right;
+    margin-top: 25px;
+}
+#navbar-toggle div {
+    width: 35px;
+    height: 5px;
+    background-color: #bfbfbf;
+    margin: 6px 0;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}

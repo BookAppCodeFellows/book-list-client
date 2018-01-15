@@ -1,0 +1,7 @@
+.book-wrapper .book-description {
+    float: right;
+}
+
+#app-title, .logo {
+    float: left;
+}

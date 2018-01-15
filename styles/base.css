@@ -1,3 +1,44 @@
 .not-admin{
     display: none;
 }
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#book-links {
+    display: none;
+    background-color: #202020;
+    padding: 0;
+    margin-top: 0;
+}
+
+#book-links li {
+    list-style: none;
+    padding: 20px 0;
+}
+
+#book-links li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding-left: 10px;
+}
+
+#book-links li:hover {
+    background-color: #4a4a4a;
+}
+
+#app-title {
+    color: #939393;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+ 

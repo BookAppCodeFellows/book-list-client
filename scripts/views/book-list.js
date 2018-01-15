@@ -14,8 +14,7 @@ var app = app || {};
         $('#book-list').append(template(book));
     })
     $('#view-details').on('click', event => {
-        let = bookId = $(this).data('data-id');
-        console.log(bookId)
+        let = bookId = $(event.target).data('id');
         page(`/books/${bookId}`);
     })
     $('#book-list-page').show();
